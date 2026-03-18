@@ -35,11 +35,11 @@ const subtitle =
 
 export function NavigationPaths() {
   return (
-    <section className="relative z-30 px-4 md:px-6 py-16 md:py-24 bg-white/[0.02] border-t border-white/5">
+    <section className="relative z-30 px-4 md:px-6 py-14 md:py-24 bg-white/[0.02] border-t border-white/5">
       <div className="max-w-6xl mx-auto">
 
         {/* Header */}
-        <div className="mb-10 md:mb-16 space-y-4 md:space-y-6">
+        <div className="mb-8 md:mb-16 space-y-4 md:space-y-6">
           <div className="flex items-center gap-4">
             <span className="w-6 md:w-8 h-px bg-[#3b8c5e] opacity-60" />
             <span className="text-[10px] md:text-xs font-medium tracking-[0.2em] text-[#3b8c5e] uppercase">
@@ -63,36 +63,46 @@ export function NavigationPaths() {
               >
                 {subtitle}
               </p>
-              <div className="flex lg:justify-end mt-3 md:mt-4">
+              <div className="flex lg:justify-end mt-3">
                 <span className="w-6 md:w-8 h-px bg-[#C9A84C] opacity-40" />
               </div>
             </div>
           </div>
         </div>
 
-        {/* Cards — 1 col mobile, 3 col desktop */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/5 border border-white/5">
+        {/* Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-px bg-white/5 border border-white/5">
           {PATHS.map((path, index) => (
             <Link
               key={path.href}
               href={path.href}
-              className="group relative overflow-hidden bg-background-dark p-6 md:p-10 transition-all duration-500 hover:bg-white/[0.03]"
+              className="group relative overflow-hidden bg-background-dark p-6 md:p-10
+                transition-all duration-500
+                hover:bg-white/[0.03] active:bg-white/[0.05]"
             >
-              <div className="absolute inset-0 z-0
+              {/* Shimmer */}
+              <div className="absolute inset-0 z-0 pointer-events-none
                 bg-[linear-gradient(105deg,transparent_40%,rgba(201,168,76,0.07)_50%,transparent_60%)]
-                translate-x-[-100%] group-hover:translate-x-[100%]
-                transition-transform duration-1000 ease-in-out pointer-events-none" />
+                translate-x-[-100%] group-hover:translate-x-[100%] group-active:translate-x-[100%]
+                transition-transform duration-1000 ease-in-out" />
 
-              <div className="absolute inset-0 z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700
-                bg-[radial-gradient(ellipse_at_bottom,rgba(201,168,76,0.08)_0%,transparent_70%)] pointer-events-none" />
+              {/* Glow */}
+              <div className="absolute inset-0 z-0 pointer-events-none opacity-0
+                group-hover:opacity-100 group-active:opacity-100
+                transition-opacity duration-700
+                bg-[radial-gradient(ellipse_at_bottom,rgba(201,168,76,0.08)_0%,transparent_70%)]" />
 
+              {/* Línea superior */}
               <div className="absolute top-0 left-0 right-0 h-px z-10
                 bg-gradient-to-r from-transparent via-[#C9A84C] to-transparent
-                scale-x-0 group-hover:scale-x-100 transition-transform duration-700" />
+                scale-x-0 group-hover:scale-x-100 group-active:scale-x-100
+                transition-transform duration-700" />
 
+              {/* Línea inferior */}
               <div className="absolute bottom-0 left-0 right-0 h-px z-10
                 bg-gradient-to-r from-transparent via-[#C9A84C] to-transparent
-                scale-x-0 group-hover:scale-x-100 transition-transform duration-700" />
+                scale-x-0 group-hover:scale-x-100 group-active:scale-x-100
+                transition-transform duration-700" />
 
               <div className="relative z-10">
                 <span
@@ -108,13 +118,16 @@ export function NavigationPaths() {
 
                 <h2
                   className="text-2xl md:text-3xl font-black text-white uppercase tracking-tight mb-3 md:mb-4 leading-none
-                    group-hover:text-[#E0BD6A] transition-colors duration-300"
+                    group-hover:text-[#E0BD6A] group-active:text-[#E0BD6A]
+                    transition-colors duration-300"
                   style={{ fontFamily: "'Libre Baskerville', Georgia, serif" }}
                 >
                   {path.title}
                 </h2>
 
-                <div className="w-6 md:w-8 h-px bg-[#C9A84C]/30 mb-4 md:mb-6 group-hover:bg-[#C9A84C] transition-colors duration-500" />
+                <div className="w-6 md:w-8 h-px bg-[#C9A84C]/30 mb-4 md:mb-6
+                  group-hover:bg-[#C9A84C] group-active:bg-[#C9A84C]
+                  transition-colors duration-500" />
 
                 <p
                   className="text-slate-500 text-xs md:text-sm leading-relaxed mb-8 md:mb-10 font-light"
@@ -123,7 +136,11 @@ export function NavigationPaths() {
                   {path.description}
                 </p>
 
-                <div className="flex items-center gap-2 text-[#3b8c5e] group-hover:text-[#C9A84C] font-bold uppercase tracking-[0.15em] text-xs group-hover:gap-4 transition-all duration-300">
+                <div className="flex items-center gap-2 text-[#3b8c5e]
+                  group-hover:text-[#C9A84C] group-active:text-[#C9A84C]
+                  font-bold uppercase tracking-[0.15em] text-xs
+                  group-hover:gap-4 group-active:gap-4
+                  transition-all duration-300">
                   {path.cta}
                   <span className="material-symbols-outlined" style={{ fontSize: "14px" }}>
                     arrow_forward
