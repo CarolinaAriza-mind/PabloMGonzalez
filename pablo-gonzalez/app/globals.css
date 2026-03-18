@@ -8,14 +8,14 @@
   --color-background-dark: #0d0d0d;
   --color-background-light: #ffffff;
   --font-display: "Manrope", sans-serif;
-  --font-serif: "Libre Baskerville", Georgia, serif;
+  --font-serif: "Baskerville", serial, regular;
 }
 
 body {
   min-height: max(884px, 100dvh);
   background-color: #0d0d0d;
   color: #f1f5f9;
-  font-family: "Manrope", sans-serif;
+  font-family: "Baskerville", serial, regular;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }

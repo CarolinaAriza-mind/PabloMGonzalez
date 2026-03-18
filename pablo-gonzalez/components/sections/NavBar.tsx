@@ -30,9 +30,9 @@ export function Navbar() {
           </button>
 
           <Link href="/" className="flex items-center">
-            <div className="relative h-100 w-170">
+            <div className="relative h-32 w-40">
               <Image
-                src="/LOGO PNG (4).png"
+                src="/ICONO PNG (4).png"
                 alt="Pablo González"
                 fill
                 className="object-contain object-left"
