@@ -37,7 +37,7 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 0.2 }}
           >
             <span className="w-5 h-px bg-[#3b8c5e] opacity-60" />
-            <span className="text-[9px] font-medium tracking-[0.18em] text-[#3b8c5e] uppercase">
+            <span className="text-[10px] md:text-xs font-medium tracking-[0.2em] text-[#3b8c5e] uppercase">
               Liderazgo Ético · Transformación Auténtica
             </span>
             <span className="w-5 h-px bg-[#3b8c5e] opacity-60" />
@@ -89,11 +89,11 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
           >
-            <span className="w-8 h-px bg-[#C9A84C] opacity-60" />
-            <span className="text-xs font-medium tracking-[0.25em] text-[#C9A84C] uppercase">
+            <span className="w-8 h-px bg-[#3b8c5e] opacity-60" />
+            <span className="text-xs font-medium tracking-[0.25em] text-[#3b8c5e] uppercase">
               Liderazgo Ético · Transformación Auténtica
             </span>
-            <span className="w-8 h-px bg-[#C9A84C] opacity-60" />
+            <span className="w-8 h-px bg-[#3b8c5e] opacity-60" />
           </motion.div>
 
           <motion.div

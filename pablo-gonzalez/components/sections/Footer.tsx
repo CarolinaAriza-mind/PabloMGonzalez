@@ -2,7 +2,10 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer id="contacto" className="py-12 bg-background-dark border-t border-white/5">
+    <footer
+      id="contacto"
+      className="py-12 bg-background-dark border-t border-white/5"
+    >
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
         {/* Brand */}
         <Link href="/">
@@ -11,7 +14,7 @@ export function Footer() {
           </span>
         </Link>
         {/* Copyright */}
-        <p className="text-xs text-slate-600">
+        <p className="text-sm md:text-base text-slate-400 leading-relaxed font-light">
           © {new Date().getFullYear()} Pablo González. Todos los derechos
           reservados.
         </p>

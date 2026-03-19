@@ -49,7 +49,7 @@ export function NavigationPaths() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 items-end">
             <h2
-              className="text-3xl md:text-4xl lg:text-5xl font-black text-white uppercase tracking-tight leading-none"
+              className="text-lg md:text-xl lg:text-4xl font-black text-white uppercase tracking-tighter leading-none"
               style={{ fontFamily: "'Libre Baskerville', Georgia, serif" }}
             >
               Elegí tu{" "}
@@ -57,14 +57,13 @@ export function NavigationPaths() {
             </h2>
 
             <div className="lg:text-right">
-              <p
-                className="text-slate-500 text-xs md:text-sm leading-relaxed font-light max-w-sm lg:ml-auto"
+             <p className="text-sm md:text-base text-slate-400 leading-relaxed font-light"
                 style={{ fontFamily: "'Libre Baskerville', Georgia, serif" }}
               >
                 {subtitle}
               </p>
               <div className="flex lg:justify-end mt-3">
-                <span className="w-6 md:w-8 h-px bg-[#C9A84C] opacity-40" />
+                <span className="w-6 md:w-8 h-px bg-[#3b8c5e] opacity-40" />
               </div>
             </div>
           </div>

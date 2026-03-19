@@ -35,33 +35,35 @@ const p2 =
   "Mi compromiso es acompañarte desde la autenticidad, no desde la perfección. Porque el verdadero liderazgo no nace de no haber caído — nace de saber levantarse con más claridad que antes.";
 const p3 =
   "Ofrezco acompañamiento real, basado en empatía y experiencia vivida. Cierro la brecha entre la teoría abstracta y la realidad de alto nivel — porque yo mismo he estado en ese punto de quiebre.";
-const stats = [
-  { num: "10+", label: "Años de experiencia" },
-  { num: "500+", label: "Líderes acompañados" },
-  { num: "3", label: "Áreas de impacto" },
-];
 
 export function BrandPositioning() {
   return (
-    <section id="filosofia" className="py-16 md:py-24 px-4 md:px-6 bg-background-dark">
+    <section
+      id="filosofia"
+      className="py-16 md:py-24 px-4 md:px-6 bg-background-dark"
+    >
       <div className="max-w-7xl mx-auto space-y-16 md:space-y-32">
-
         {/* ── BLOQUE 1 ── */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center">
-
           {/* Imagen */}
           <div className="relative group order-2 lg:order-1">
             <div className="absolute -inset-1 bg-gradient-to-r from-primary to-transparent opacity-20 group-hover:opacity-40 group-active:opacity-40 transition-opacity rounded-xl" />
             <div className="absolute inset-0 z-10 rounded-xl overflow-hidden pointer-events-none">
-              <div className="absolute inset-0
+              <div
+                className="absolute inset-0
                 bg-[linear-gradient(105deg,transparent_40%,rgba(201,168,76,0.1)_50%,transparent_60%)]
                 translate-x-[-100%] group-hover:translate-x-[100%] group-active:translate-x-[100%]
-                transition-transform duration-1000 ease-in-out" />
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-700
-                bg-[radial-gradient(ellipse_at_bottom,rgba(201,168,76,0.15)_0%,transparent_70%)]" />
-              <div className="absolute bottom-0 left-0 right-0 h-px
+                transition-transform duration-1000 ease-in-out"
+              />
+              <div
+                className="absolute inset-0 opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-700
+                bg-[radial-gradient(ellipse_at_bottom,rgba(201,168,76,0.15)_0%,transparent_70%)]"
+              />
+              <div
+                className="absolute bottom-0 left-0 right-0 h-px
                 bg-gradient-to-r from-transparent via-[#C9A84C] to-transparent
-                scale-x-0 group-hover:scale-x-100 group-active:scale-x-100 transition-transform duration-700" />
+                scale-x-0 group-hover:scale-x-100 group-active:scale-x-100 transition-transform duration-700"
+              />
             </div>
             <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] rounded-xl overflow-hidden">
               <Image
@@ -84,15 +86,13 @@ export function BrandPositioning() {
             </div>
 
             <h2
-              className="text-3xl md:text-4xl lg:text-5xl font-black text-white uppercase tracking-tighter leading-none"
+              className="text-lg md:text-xl lg:text-4xl font-black text-white uppercase tracking-tighter leading-none"
               style={{ fontFamily: "'Libre Baskerville', Georgia, serif" }}
             >
               La vida no te rompe,
-              <br />{" "}
-              <span className="text-[#C9A84C]">Te prepara</span>
+              <br /> <span className="text-[#C9A84C]">Te prepara</span>
             </h2>
-
-            <blockquote className="border-l-2 border-[#C9A84C] pl-4 md:pl-6 my-4 md:my-8">
+            <blockquote className="border-l-2 border-[#3b8c5e] pl-4 md:pl-6 my-4 md:my-8">
               <p
                 className="text-base md:text-lg lg:text-xl text-slate-300 font-light leading-relaxed italic"
                 style={{ fontFamily: "'Libre Baskerville', Georgia, serif" }}
@@ -101,17 +101,12 @@ export function BrandPositioning() {
               </p>
             </blockquote>
 
-            <p className="text-sm md:text-base text-slate-400 leading-relaxed font-light">{p1}</p>
-            <p className="text-sm md:text-base text-slate-400 leading-relaxed font-light">{p2}</p>
-
-            <div className="grid grid-cols-3 gap-4 md:gap-6 pt-4 border-t border-white/5">
-              {stats.map((stat) => (
-                <div key={stat.label}>
-                  <p className="text-xl md:text-2xl font-black text-[#C9A84C]">{stat.num}</p>
-                  <p className="text-[10px] md:text-xs text-slate-500 mt-1 leading-tight">{stat.label}</p>
-                </div>
-              ))}
-            </div>
+            <p className="text-sm md:text-base text-slate-400 leading-relaxed font-light">
+              {p1}
+            </p>
+            <p className="text-sm md:text-base text-slate-400 leading-relaxed font-light">
+              {p2}
+            </p>
           </div>
         </div>
 
@@ -127,13 +122,15 @@ export function BrandPositioning() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-start">
             <div className="space-y-4 md:space-y-6">
               <h2
-                className="text-3xl md:text-4xl lg:text-5xl font-black text-white uppercase tracking-tighter leading-none"
+                className="text-lg md:text-xl lg:text-4xl font-black text-white uppercase tracking-tighter leading-none"
                 style={{ fontFamily: "'Libre Baskerville', Georgia, serif" }}
               >
                 No ofrezco soluciones{" "}
                 <span className="text-[#C9A84C]">mágicas.</span>
               </h2>
-              <p className="text-base md:text-xl text-slate-400 leading-relaxed font-light">{p3}</p>
+              <p className="text-sm md:text-base text-slate-400 leading-relaxed font-light">
+                {p3}
+              </p>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
@@ -144,10 +141,12 @@ export function BrandPositioning() {
                     hover:border-[rgba(201,168,76,0.3)] active:border-[rgba(201,168,76,0.3)]
                     transition-all duration-500 cursor-default"
                 >
-                  <div className="absolute inset-0
+                  <div
+                    className="absolute inset-0
                     bg-[linear-gradient(105deg,transparent_40%,rgba(201,168,76,0.06)_50%,transparent_60%)]
                     translate-x-[-100%] group-hover/card:translate-x-[100%] group-active/card:translate-x-[100%]
-                    transition-transform duration-1000 ease-in-out pointer-events-none" />
+                    transition-transform duration-1000 ease-in-out pointer-events-none"
+                  />
                   <span
                     className="material-symbols-outlined text-primary group-hover/card:text-[#C9A84C] group-active/card:text-[#C9A84C] mb-3 md:mb-4 block transition-colors duration-300"
                     style={{ fontSize: "24px" }}
@@ -165,7 +164,6 @@ export function BrandPositioning() {
             </div>
           </div>
         </div>
-
       </div>
     </section>
   );
